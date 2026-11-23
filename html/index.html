@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MZM-WORKS Loading Screen</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="loading-screen" id="loadingScreen">
+    <div class="background-fallback"></div>
+    <video class="background" id="backgroundVideo" muted loop playsinline></video>
+    <div class="background-overlay"></div>
+
+    <div class="layout">
+      <header class="header">
+        <div class="brand">
+          <div class="brand-mark"><span>MZ</span></div>
+          <div class="brand-copy">
+            <strong>MZM-WORKS</strong>
+            <span>PREMIUM EXPERIENCE</span>
+          </div>
+        </div>
+        <div class="server-status"><span class="status-dot"></span><span>Server connection</span></div>
+      </header>
+
+      <section class="hero">
+        <div class="server-emblem" id="serverInitials">MZM</div>
+        <div class="eyebrow" id="serverTag">CONNECTING TO CITY</div>
+        <h1 id="serverName">MZM ROLEPLAY</h1>
+        <div class="subtitle" id="serverSubtitle">A refined city experience built around performance, roleplay, and community.</div>
+      </section>
+
+      <aside class="side-panel">
+        <div class="info-card">
+          <nav class="tabs" aria-label="Loading information">
+            <button class="tab active" data-tab="info">Server</button>
+            <button class="tab" data-tab="rules">Rules</button>
+            <button class="tab" data-tab="community">Community</button>
+          </nav>
+          <div class="panel-content">
+            <section class="panel active" id="info">
+              <h2>Server information</h2>
+              <div class="info-row"><span>Status</span><span>Online</span></div>
+              <div class="info-row"><span>Platform</span><span>FiveM</span></div>
+              <div class="info-row"><span>Experience</span><span>Serious RP</span></div>
+              <div class="info-row"><span>Location</span><span>EU</span></div>
+              <p>Respect every player, follow staff instructions, and keep the city immersive.</p>
+            </section>
+
+            <section class="panel" id="rules">
+              <h2>Important rules</h2>
+              <ul>
+                <li>Value every life and remain in character.</li>
+                <li>No RDM, VDM, metagaming or combat logging.</li>
+                <li>Use appropriate roleplay for every situation.</li>
+                <li>Be respectful toward players and staff.</li>
+              </ul>
+            </section>
+
+            <section class="panel" id="community">
+              <h2>Community</h2>
+              <a class="discord-link" id="discordLink" href="#" target="_blank" rel="noopener"><span id="discordName">Join MZM-WORKS</span><span>↗</span></a>
+              <div id="socialLinks"></div>
+              <div class="staff-grid" id="staffGrid"></div>
+            </section>
+          </div>
+        </div>
+      </aside>
+
+      <footer class="bottom">
+        <div class="progress-wrap">
+          <div class="progress-meta">
+            <div class="loading-message" id="loadingMessage">Establishing a secure connection</div>
+            <div class="percentage"><span id="percentage">0</span><small>%</small></div>
+          </div>
+          <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+
+        <div class="player">
+          <button class="play-button" id="playButton" type="button" aria-label="Play music">▶</button>
+          <div class="track-info">
+            <strong id="trackTitle">Ambient City</strong>
+            <span id="trackArtist">MZM-WORKS Radio</span>
+          </div>
+          <div class="volume-wrap"><input class="volume" id="volume" type="range" min="0" max="100" value="35" aria-label="Volume"></div>
+        </div>
+      </footer>
+    </div>
+    <div class="noise"></div>
+  </main>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
